@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Template</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            color: #007bff;
+            margin: 0;
+        }
+        .content {
+            margin-bottom: 30px;
+        }
+        .content h2 {
+            color: #333;
+            border-left: 4px solid #007bff;
+            padding-left: 15px;
+        }
+        .footer {
+            text-align: center;
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+            color: #666;
+            font-size: 0.9em;
+        }
+        .button {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .highlight {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>{{company_name}}</h1>
+        </div>
+        
+        <div class="content">
+            <h2>Bonjour {{prenom}} {{nom}},</h2>
+            
+            <p>Nous espérons que ce message vous trouve en bonne santé.</p>
+            
+            <div class="highlight">
+                <p><strong>Message personnalisé :</strong></p>
+                <p>{{message_personnalise}}</p>
+            </div>
+            
+            <p>Nous serions ravis de pouvoir discuter avec vous de nos services et de la manière dont nous pouvons vous aider à atteindre vos objectifs.</p>
+            
+            <p style="text-align: center;">
+                <a href="{{contact_link}}" class="button">Nous Contacter</a>
+            </p>
+            
+            <p>N'hésitez pas à nous contacter si vous avez des questions ou si vous souhaitez plus d'informations.</p>
+        </div>
+        
+        <div class="footer">
+            <p>Cordialement,</p>
+            <p><strong>{{sender_name}}</strong><br>
+            {{sender_title}}<br>
+            {{company_name}}</p>
+            
+            <hr style="margin: 20px 0;">
+            
+            <p style="font-size: 0.8em;">
+                Cet email a été envoyé à {{email}}.<br>
+                Si vous ne souhaitez plus recevoir nos emails, 
+                <a href="{{unsubscribe_link}}">cliquez ici pour vous désabonner</a>.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
